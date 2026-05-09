@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #f2f2f0;
+  --surface: #ffffff;
+  --surface2: #e8e8e4;
+  --accent: #1a1a1a;
+  --accent-green: #4de8b0;
+  --accent-purple: #c8b4ff;
+  --text: #1a1a1a;
+  --muted: #888884;
+  --border: rgba(0,0,0,0.08);
+  --font-head: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+}
+
+.nav-logo {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+
+.nav-logo span { color: var(--muted); }
+
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem;
+  border-radius: 100px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.nav-icon {
+  background: var(--text) !important;
+  color: #fff !important;
+  border-radius: 100px !important;
+  padding: 0.45rem 1.1rem !important;
+  font-size: 0.82rem !important;
+  transition: opacity 0.2s !important;
+}
+
+.nav-icon:hover {
+  background: var(--text) !important;
+  opacity: 0.8;
+}
